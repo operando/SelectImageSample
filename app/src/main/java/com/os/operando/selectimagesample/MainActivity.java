@@ -20,9 +20,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void onSelectImage(View v) {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
-        startActivityForResult(intent, REQUEST_GALLERY);
+        startActivityForResult(IntentUtil.createPickImage(), REQUEST_GALLERY);
     }
 
     @Override
